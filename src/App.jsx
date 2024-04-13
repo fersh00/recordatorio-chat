@@ -4,11 +4,13 @@ import 'bulma/css/bulma.css'
 import Login from './pages/Login'
 import Chat from './pages/Chat'
 import Register from './pages/Register'
+import Prueba from './pages/Prueba'
 import PrivateRouter from './router/PrivateRouter'
-
+import Counter from './components/Counter'
 function App() {
 	return (
 		<>
+		<Counter />
 			<div>
 				<Router>
 					<Routes>
@@ -16,6 +18,11 @@ function App() {
 							<Route
 								path='/'
 								element={<Chat />}
+								exact
+							/>
+							<Route
+								path='/prueba'
+								element={<Prueba />}
 								exact
 							/>
 						</Route>
@@ -31,6 +38,8 @@ function App() {
 					</Routes>
 				</Router>
 			</div>
+		
+
 		</>
 	)
 }
