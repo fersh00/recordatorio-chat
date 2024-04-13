@@ -1,13 +1,36 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bulma/css/bulma.css'
-import Counter from './components/Counter'
-//import axios from 'axios'
+
+import Login from './pages/Login'
+import Chat from './pages/Chat'
+import Register from './pages/Register'
+import PrivateRouter from './router/PrivateRouter'
 
 function App() {
 	return (
 		<>
-			<h1 className=' title is-size-1 has-text-centered'>App</h1>
+			<div>
+				<Router>
+					<Routes>
+						<Route element={<PrivateRouter />}>
+							<Route
+								path='/'
+								element={<Chat />}
+								exact
+							/>
+						</Route>
 
-			<Counter />
+						<Route
+							path='/login'
+							element={<Login />}
+						/>
+						<Route
+							path='/register'
+							element={<Register />}
+						/>
+					</Routes>
+				</Router>
+			</div>
 		</>
 	)
 }
