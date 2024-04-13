@@ -1,16 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bulma/css/bulma.css'
 
-import Login from './pages/Login'
-import Chat from './pages/Chat'
-import Register from './pages/Register'
-import Prueba from './pages/Prueba'
-import PrivateRouter from './router/PrivateRouter'
-import Counter from './components/Counter'
+import { Login } from './pages/Login'
+import { Chat } from './pages/Chat'
+import { Register } from './pages/Register'
+import { Prueba } from './pages/Prueba'
+import { PrivateRouter } from './router/PrivateRouter'
+import { Counter } from './components/Counter'
+
 function App() {
 	return (
 		<>
-		<Counter />
+			<Counter />
 			<div>
 				<Router>
 					<Routes>
@@ -38,8 +39,6 @@ function App() {
 					</Routes>
 				</Router>
 			</div>
-		
-
 		</>
 	)
 }

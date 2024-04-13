@@ -1,8 +1,3 @@
-
-const Prueba = () => {
-  return (
-    <div>Prueba</div>
-  )
+export const Prueba = () => {
+	return <div>Prueba</div>
 }
-
-export default Prueba
